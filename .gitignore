@@ -2,6 +2,6 @@
 .Rhistory
 .RData
 .Ruserdata
-data/
 .DS_Store
-/eds223-hw4_cache
+data/
+eds223-hw4_cache/
