@@ -16,11 +16,11 @@
 ```
 Potential-aquaculture-YoselynR
 ├── README.md
-├── HW4.html
-├── HW4.qmd
+├── Potential-aquaculture-YoselynR.html
+├── Potential-aquaculture-YoselynR.qmd
 ├── .gitignore
 ├── LICENSE
-├── HW4_files
+├── Potential-aquaculture-YoselynR_files
 |   ├── .csv
 └── images
     │   .jpg
