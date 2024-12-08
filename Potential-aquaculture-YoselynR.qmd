@@ -1,5 +1,6 @@
 ---
-title: "eds223-hw4"
+title: "Potential Aquaculture"
+subtitle: "West Coast Suitable Growing Conditions"
 author: "Yos Ramirez"
 format: html
 editor: visual
