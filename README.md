@@ -26,10 +26,14 @@ A general function, calculate_suitable_eez_area(), was developed to allow for si
 - The maps include color-coded representations of total suitable area per EEZ region.
 
 ## Data
-The project integrates multiple spatial datasets, including bathymetry and SST rasters, and EEZ (Exclusive Economic Zone) shapefiles.
+The project integrates multiple spatial datasets, including bathymetry [GEBCO Gridded Bathymetry Data](https://www.gebco.net/data_and_products/gridded_bathymetry_data/#area) and SST rasters [NOAA Coral Reef Watch](https://coralreefwatch.noaa.gov/product/5km/index_5km_ssta.php) , and EEZ (Exclusive Economic Zone) [MarineRegions EEZ](https://www.marineregions.org/eez.php) shapefiles.
 
 ## References
+GEBCO. (n.d.). Gridded bathymetry data. The General Bathymetric Chart of the Oceans. Retrieved [Nov 30, 2024], from https://www.gebco.net/data_and_products/gridded_bathymetry_data/#area
 
+MarineRegions.org. (n.d.). Exclusive Economic Zones (EEZs). Marine Regions. Retrieved [Nov 30, 2024, from https://www.marineregions.org/eez.php
+
+NOAA Coral Reef Watch. (n.d.). 5 km Sea Surface Temperature Anomaly (SSTA). National Oceanic and Atmospheric Administration. Retrieved [Nov 30, 2024], from https://coralreefwatch.noaa.gov/product/5km/index_5km_ssta.php
 
 ## Repository organization
 ```
