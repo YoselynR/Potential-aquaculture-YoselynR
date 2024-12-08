@@ -21,9 +21,13 @@ The analysis supports the hypothesis that neighborhoods with poorer HOLC grades 
 
 ## Data
 The analysis incorporates three primary datasets:
+
 HOLC Grades: Historical redlining data for Los Angeles.
+
 EJScreen Data: A tool developed by the EPA to assess environmental and demographic conditions in U.S. communities.
+
 Biodiversity Data: Bird observation data from the Global Biodiversity Information Facility (GBIF) for LA County.
+
 ## References
 
 ## Repository organization
