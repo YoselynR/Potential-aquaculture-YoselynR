@@ -43,10 +43,9 @@ Potential-aquaculture-YoselynR
 ├── Potential-aquaculture-YoselynR.qmd
 ├── .gitignore
 ├── LICENSE
-├── Potential-aquaculture-YoselynR_files
-|   ├── figure-html
-|   ├── lib
-└── images
-    │   .jpg
+└── Potential-aquaculture-YoselynR_files
+    ├── figure-html
+    └──  lib
+
 ```
 `data` folder has been excluded from repository organization
