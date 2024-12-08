@@ -39,9 +39,6 @@ sst_rasters <- stack(list.files(path = "data/", pattern = "sst.*.tif", full.name
 ```{r, cache=TRUE}
 # Set the random seed for reproducibility
 set.seed(123)  # Set a fixed seed value for reproducibility
-# Check the number of layers and names in the SST stack
-nlayers(sst_rasters)
-names(sst_rasters)
 ```
 
 ```{r}
@@ -49,11 +46,6 @@ names(sst_rasters)
 crs_eez <- proj4string(west_coast_eez_sp)  # CRS of the EEZ shapefile
 crs_bathymetry <- projection(bathymetry_raster)  # CRS of the bathymetry raster
 crs_sst <- projection(sst_rasters)  # CRS of the SST raster stack
-  
-# Print individual CRS values to debug
-print(paste("EEZ CRS: ", crs_eez))
-print(paste("Bathymetry CRS: ", crs_bathymetry))
-print(paste("SST CRS: ", crs_sst))
 
 ```
 
@@ -119,7 +111,7 @@ bathymetry_suitable <- calc(bathymetry_raster, fun = function(x) {
   ifelse(is.na(x) |x <= suitable_depth_min | x >= suitable_depth_max, 0, 1)
 })
 
-# Plot the bathymetry suitability map
+# Plot the bathymetry suitability map to look at results
 plot(bathymetry_suitable, main = "Suitable Depth (Bathymetry)", xlab = "Eastings (m)", ylab = "Northings (m)", legend=FALSE)
 ```
 
@@ -129,7 +121,7 @@ sst_suitable <- calc(sst_celsius, fun = function(x) {
   ifelse(is.na(x) | x <= suitable_sst_min | x >= suitable_sst_max, 0, 1)
 })
 
-# Plot the SST suitability map
+# Plot the SST suitability map to look at results
 plot(sst_suitable, main = "Suitable Sea Surface Temperature", xlab = "Eastings (m)", ylab = "Northings (m)",legend=FALSE)
 ```
 
@@ -139,7 +131,7 @@ suitable_locations <- overlay(bathymetry_suitable, sst_suitable, fun = function(
   x * y  
 })
 
-# Plot the resulting suitability map
+# Plot the resulting suitability map to look at results and confirm successful overlay
 plot(suitable_locations,main = "Suitable Locations", xlab = "Eastings (m)", ylab = "Northings (m)",legend=FALSE)
 ```
 
@@ -149,7 +141,7 @@ plot(suitable_locations,main = "Suitable Locations", xlab = "Eastings (m)", ylab
 # Rasterize the EEZ shapefile to match the resolution of the suitable locations raster
 eez_raster <- rasterize(west_coast_eez_sp, suitable_locations, field = "rgn_id", fun = mean)
 
-# Plot the EEZ raster
+# Plot the EEZ raster to look at EEZ (if not already familiar with)
 plot(eez_raster, main = "Exclusive Economic Zones", xlab = "Eastings (m)", ylab = "Northings (m)")
 ```
 
@@ -170,7 +162,7 @@ print(total_area_by_eez)
 ```{r}
 # Merge the total area data with the EEZ shapefile to prepare for plotting
 west_coast_eez_sp$Total_Area <- total_area_by_eez
-# View Columns of EEZ shapefile
+# View Columns of EEZ shapefile to make sure column is added
 head(west_coast_eez_sp@data)
 ```
 
@@ -206,7 +198,7 @@ tm_shape(west_coast_eez_sp) +
 The map above for the oyster species shows the exclusive economic zones with the area suitability, specific to its temperature and depth preferences. The zone with the most area in m2 for oyster aquaculture is Washington. Southern California has the second largest suitable area for oyster aquaculture and Central California follows. Interestingly Central California has the least suitable area for oyster aquaculture, noticeable in the "Suitable Locations" mask.
 The area is calculated from the x and y pixels in m2 and multiplied with 0 or 1 to give the final numbers. The set.seed allows for reproducibility and helps produce the same output each time. I kept everything in Large RasterLayer along with the West Coast EEZ Spatial Polygons and transformed crs to UTM 10 for meters in the west coast. Overall the approach to the workflow was to minimize the code but have clear output visualizations to understand each step.
 
-# Function for any species
+# Function for any species 
 
 ```{r, cache=TRUE}
 # General function to determine suitable locations for marine aquaculture
