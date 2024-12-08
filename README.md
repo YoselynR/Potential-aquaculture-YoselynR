@@ -13,7 +13,7 @@ Oysters: Suitable SST between 11°C and 30°C, depth between 0m and 70m.
 Squid: Suitable SST between 8°C and 13°C, depth between 20m and 180m.
 
 ## Purpose
-A general function, calculate_suitable_eez_area(), was developed to allow for similar analyses for different species, temperature/depth preferences, and time periods. This makes the workflow scalable and adaptable to other marine species and different geographic regions.
+A general function, calculate_suitable_eez_area(), was developed to allow for similar analyses for different species, temperature/depth preferences, and time periods. This makes the workflow scalable and adaptable to other marine species and different geographic regions. The project highlights the utility of spatial data processing and visualization techniques in determining aquaculture potential, helping stakeholders prioritize areas for farming specific species. The mapping clearly demonstrates the geographic variation in aquaculture suitability, offering valuable insights for marine resource management and aquaculture planning. The approach can be extended to other species or regions, making it a flexible tool for marine resource management and aquaculture development.
 
 ## Highlights
 - Key libraries like raster, sp, sf, terra, and tmap were used to load, manipulate, and visualize spatial data.
@@ -24,9 +24,6 @@ A general function, calculate_suitable_eez_area(), was developed to allow for si
 - The total suitable area for aquaculture was computed by region.
 - The tmap package was used to create visually appealing maps that highlight the suitable areas for each species within each EEZ.
 - The maps include color-coded representations of total suitable area per EEZ region.
-
-## Summary
-The project highlights the utility of spatial data processing and visualization techniques in determining aquaculture potential, helping stakeholders prioritize areas for farming specific species. The mapping clearly demonstrates the geographic variation in aquaculture suitability, offering valuable insights for marine resource management and aquaculture planning. The approach can be extended to other species or regions, making it a flexible tool for marine resource management and aquaculture development.
 
 ## Data
 The project integrates multiple spatial datasets, including bathymetry and SST rasters, and EEZ (Exclusive Economic Zone) shapefiles.
