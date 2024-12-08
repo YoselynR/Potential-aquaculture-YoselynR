@@ -8,9 +8,9 @@ This project is designed to analyze and visualize the suitability of locations f
 
 SST and Depth Suitability: For each species, temperature and depth preferences were defined:
 
-Oysters: Suitable SST between 11°C and 30°C, depth between 0m and 70m.
+**Oysters:** Suitable SST between 11°C and 30°C, depth between 0m and 70m.
 
-Squid: Suitable SST between 8°C and 13°C, depth between 20m and 180m.
+**Squid:** Suitable SST between 8°C and 13°C, depth between 20m and 180m.
 
 ## Purpose
 A general function, calculate_suitable_eez_area(), was developed to allow for similar analyses for different species, temperature/depth preferences, and time periods. This makes the workflow scalable and adaptable to other marine species and different geographic regions. The project highlights the utility of spatial data processing and visualization techniques in determining aquaculture potential, helping stakeholders prioritize areas for farming specific species. The mapping clearly demonstrates the geographic variation in aquaculture suitability, offering valuable insights for marine resource management and aquaculture planning. The approach can be extended to other species or regions, making it a flexible tool for marine resource management and aquaculture development.
@@ -30,6 +30,7 @@ The project integrates multiple spatial datasets, including bathymetry and SST r
 
 ## References
 
+
 ## Repository organization
 ```
 Potential-aquaculture-YoselynR
@@ -39,7 +40,9 @@ Potential-aquaculture-YoselynR
 ├── .gitignore
 ├── LICENSE
 ├── Potential-aquaculture-YoselynR_files
-|   ├── .csv
+|   ├── figure-html
+|   ├── lib
 └── images
     │   .jpg
 ```
+`data` folder has been excluded from repository organization
